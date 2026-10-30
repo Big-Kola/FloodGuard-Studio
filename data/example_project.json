@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "application": {
+    "name": "FloodGuard Studio",
+    "version": "2.0.0"
+  },
+  "project": {
+    "metadata": {
+      "name": "Riverside Demonstration Catchment",
+      "project_number": "FGS-DEMO-001",
+      "client": "Portfolio demonstration",
+      "location": "Illustrative urban catchment",
+      "engineer": "Civil Engineering Portfolio",
+      "description": "Example project supplied with FloodGuard Studio. Network geometry, rainfall and asset values are illustrative and are not observed site measurements.",
+      "created_at": "2026-10-26T09:00:00+00:00",
+      "modified_at": "2026-10-26T09:00:00+00:00"
+    },
+    "catchment": {
+      "area_ha": 5.0,
+      "rainfall_intensity_mm_h": 90.0,
+      "runoff_coefficient": 0.75,
+      "notes": "Illustrative small urban catchment. A real assessment requires local IDF data, verified land use and survey information."
+    },
+    "network": {
+      "nodes": [
+        {
+          "id": "J-01",
+          "name": "Junction 1",
+          "kind": "junction",
+          "x": -300.0,
+          "y": -80.0,
+          "invert_elevation_m": 10.2,
+          "notes": ""
+        },
+        {
+          "id": "J-02",
+          "name": "Junction 2",
+          "kind": "junction",
+          "x": -20.0,
+          "y": 90.0,
+          "invert_elevation_m": 8.65,
+          "notes": ""
+        },
+        {
+          "id": "O-01",
+          "name": "Outfall 1",
+          "kind": "outfall",
+          "x": 300.0,
+          "y": -40.0,
+          "invert_elevation_m": 6.9,
+          "notes": ""
+        }
+      ],
+      "pipes": [
+        {
+          "id": "P-01",
+          "name": "Reach J1-J2",
+          "from_node_id": "J-01",
+          "to_node_id": "J-02",
+          "diameter_m": 0.9,
+          "length_m": 120.0,
+          "slope_percent": 0.6,
+          "manning_n": 0.013,
+          "material": "Concrete",
+          "notes": "Illustrative upstream reach."
+        },
+        {
+          "id": "P-02",
+          "name": "Reach J2-O1",
+          "from_node_id": "J-02",
+          "to_node_id": "O-01",
+          "diameter_m": 1.2,
+          "length_m": 160.0,
+          "slope_percent": 0.45,
+          "manning_n": 0.013,
+          "material": "Concrete",
+          "notes": "Illustrative downstream reach."
+        }
+      ]
+    },
+    "scenarios": [
+      {
+        "name": "Existing drainage configuration",
+        "catchment_area_ha": 5.0,
+        "runoff_coefficient": 0.75,
+        "rainfall_intensity_mm_h": 90.0,
+        "pipe_diameter_m": 1.0,
+        "manning_n": 0.013,
+        "slope_percent": 0.5,
+        "description": "Illustrative baseline with a 1.0 m concrete pipe."
+      },
+      {
+        "name": "Increased rainfall intensity",
+        "catchment_area_ha": 5.0,
+        "runoff_coefficient": 0.75,
+        "rainfall_intensity_mm_h": 135.0,
+        "pipe_diameter_m": 1.0,
+        "manning_n": 0.013,
+        "slope_percent": 0.5,
+        "description": "Illustrative 50% intensity increase on the existing pipe."
+      },
+      {
+        "name": "Upsized pipe diameter",
+        "catchment_area_ha": 5.0,
+        "runoff_coefficient": 0.75,
+        "rainfall_intensity_mm_h": 90.0,
+        "pipe_diameter_m": 1.2,
+        "manning_n": 0.013,
+        "slope_percent": 0.5,
+        "description": "Illustrative capacity improvement from a 1.2 m pipe."
+      }
+    ]
+  }
+}

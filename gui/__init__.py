@@ -1,0 +1,1 @@
+"""FloodGuard Studio desktop interface."""
