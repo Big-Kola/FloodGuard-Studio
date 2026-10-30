@@ -1,6 +1,6 @@
 param(
     [string]$Distro = 'Ubuntu',
-    [string]$ProjectDir = '/home/big-kola/floodguard-lite'
+    [string]$ProjectDir = '/home/big-kola/FloodGuard-Studio'
 )
 
 $ErrorActionPreference = 'Stop'

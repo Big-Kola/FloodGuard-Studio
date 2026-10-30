@@ -95,7 +95,7 @@ When running from a WSL checkout, install a desktop launcher from PowerShell:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File packaging\create_wsl_shortcut.ps1 `
-    -Distro Ubuntu -ProjectDir /home/<user>/floodguard-lite
+    -Distro Ubuntu -ProjectDir /home/<user>/FloodGuard-Studio
 ```
 
 It writes a hidden-console VBS launcher to `%LOCALAPPDATA%\FloodGuardStudio` and a
@@ -213,7 +213,7 @@ Streamlit prototype is retained only in the gitignored `.legacy_streamlit/` arch
 ## Repository structure
 
 ```text
-floodguard-lite/
+FloodGuard-Studio/
 ├── app.py                         # Desktop entry point
 ├── floodguard/
 │   ├── project.py                 # Versioned project model and persistence
